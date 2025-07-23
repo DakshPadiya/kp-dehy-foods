@@ -1,0 +1,248 @@
+.contact {
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--background-white) 100%);
+  padding: 4rem 0;
+  color: var(--primary-green);
+}
+
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+
+.contact-header p {
+  font-size: 1.3rem;
+  color: var(--secondary-green);
+  font-weight: 500;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contact-info h3,
+.contact-form h3 {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(33, 75, 61, 0.1);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(33, 75, 61, 0.15);
+}
+
+.info-icon {
+  font-size: 2rem;
+  min-width: 3rem;
+}
+
+.info-item h4 {
+  font-size: 1.3rem;
+  color: #e57c06;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.info-item p {
+  color: #214b3d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.business-hours {
+  background: linear-gradient(135deg, #214b3d, #72843a);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.business-hours h4 {
+  font-size: 1.3rem;
+  color: #e57c06;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.hours-grid div:nth-child(odd) {
+  font-weight: 600;
+}
+
+.contact-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(33, 75, 61, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #214b3d;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e57c06;
+  box-shadow: 0 0 0 3px rgba(229, 124, 6, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #d34e23, #e57c06);
+  color: white;
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(211, 78, 35, 0.4);
+}
+
+.certifications {
+  text-align: center;
+}
+
+.certifications h3 {
+  font-size: 2.5rem;
+  color: #214b3d;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.cert-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(33, 75, 61, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #e57c06;
+}
+
+.cert-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(33, 75, 61, 0.15);
+}
+
+.cert-item h4 {
+  font-size: 1.5rem;
+  color: #214b3d;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.cert-item p {
+  color: #72843a;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
