@@ -1,0 +1,46 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#214b3d;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#72843a;stop-opacity:0.1" />
+    </linearGradient>
+    <radialGradient id="powder" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#e57c06;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#d34e23;stop-opacity:0.7" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#bg2)" rx="8"/>
+  
+  <!-- Powder texture -->
+  <circle cx="150" cy="100" r="60" fill="url(#powder)"/>
+  
+  <!-- Fine powder particles -->
+  <g fill="#e57c06" opacity="0.4">
+    <circle cx="120" cy="80" r="2"/>
+    <circle cx="180" cy="75" r="1.5"/>
+    <circle cx="110" cy="120" r="1"/>
+    <circle cx="190" cy="125" r="2"/>
+    <circle cx="140" cy="70" r="1.5"/>
+    <circle cx="170" cy="130" r="1"/>
+    <circle cx="100" cy="100" r="2"/>
+    <circle cx="200" cy="95" r="1.5"/>
+    <circle cx="130" cy="140" r="1"/>
+    <circle cx="180" cy="60" r="2"/>
+  </g>
+  
+  <!-- Scattered powder effect -->
+  <g fill="#d34e23" opacity="0.3">
+    <circle cx="90" cy="90" r="3"/>
+    <circle cx="210" cy="110" r="2.5"/>
+    <circle cx="80" cy="130" r="2"/>
+    <circle cx="220" cy="80" r="3"/>
+    <circle cx="70" cy="110" r="1.5"/>
+    <circle cx="230" cy="120" r="2"/>
+  </g>
+  
+  <!-- Product label -->
+  <rect x="20" y="160" width="260" height="25" fill="#214b3d" opacity="0.9" rx="4"/>
+  <text x="150" y="177" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Dehydrated Onion Powder</text>
+</svg>
