@@ -1,5 +1,8 @@
 import React from 'react'
 import './DehydratedGarlic.css'
+import dehydratedGarlicFlakes from '/images/products/dehydrated-garlic-flakes.jpg'
+import dehydratedGarlicPowder from '/images/products/dehydrated-garlic-powder.jpg'
+import dehydratedGarlicProducts from '/images/products/dehydrated-garlic-products.jpg'
 
 const DehydratedGarlic: React.FC = () => {
   const garlicProducts = [
@@ -7,7 +10,7 @@ const DehydratedGarlic: React.FC = () => {
       id: 1,
       name: 'Dehydrated Garlic Flakes',
       description: 'High-quality garlic flakes with intense flavor and aroma',
-      image: '/images/products/garlic-flakes.svg',
+      image: dehydratedGarlicFlakes,
       specifications: {
         moisture: '5-6%',
         shelfLife: '24 Months',
@@ -21,7 +24,7 @@ const DehydratedGarlic: React.FC = () => {
       id: 2,
       name: 'Dehydrated Garlic Powder',
       description: 'Fine garlic powder with concentrated flavor for various applications',
-      image: '/images/products/garlic-powder.svg',
+      image: dehydratedGarlicPowder,
       specifications: {
         moisture: '5-6%',
         shelfLife: '24 Months',
@@ -43,7 +46,7 @@ const DehydratedGarlic: React.FC = () => {
             <p>Premium quality dehydrated garlic flakes and powder with intense flavor and aroma</p>
           </div>
           <div className="hero-image">
-            <img src="/images/products/garlic-flakes.svg" alt="Dehydrated Garlic Products" />
+            <img src={dehydratedGarlicProducts} alt="Dehydrated Garlic Products" />
           </div>
         </div>
 

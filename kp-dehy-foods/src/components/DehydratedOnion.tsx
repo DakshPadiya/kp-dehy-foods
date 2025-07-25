@@ -1,5 +1,8 @@
 import React from 'react'
 import './DehydratedOnion.css'
+import dehydratedOnionFlakes from '/images/products/dehydrated-onion-flakes.jpg'
+import dehydratedOnionPowder from '/images/products/dehydrated-onion-powder.jpg'
+import dehydratedOnionProducts from '/images/products/dehydrated-onion-products.jpg'
 
 const DehydratedOnion: React.FC = () => {
   const onionProducts = [
@@ -7,7 +10,7 @@ const DehydratedOnion: React.FC = () => {
       id: 1,
       name: 'Dehydrated Onion Flakes',
       description: 'Premium quality onion flakes with natural flavor and aroma',
-      image: '/images/products/onion-flakes.svg',
+      image: dehydratedOnionFlakes,
       specifications: {
         moisture: '5-7%',
         shelfLife: '24 Months',
@@ -21,7 +24,7 @@ const DehydratedOnion: React.FC = () => {
       id: 2,
       name: 'Dehydrated Onion Powder',
       description: 'Fine onion powder perfect for seasoning and food preparation',
-      image: '/images/products/onion-powder.svg',
+      image: dehydratedOnionPowder,
       specifications: {
         moisture: '5-7%',
         shelfLife: '24 Months',
@@ -43,7 +46,7 @@ const DehydratedOnion: React.FC = () => {
             <p>Premium quality dehydrated onion flakes and powder with exceptional taste and nutrition</p>
           </div>
           <div className="hero-image">
-            <img src="/images/products/onion-flakes.svg" alt="Dehydrated Onion Products" />
+            <img src={dehydratedOnionProducts} alt="Dehydrated Onion Products" />
           </div>
         </div>
 

@@ -1,5 +1,9 @@
 import React from 'react'
 import './Products.css'
+import dehydratedOnionFlakes from '/images/products/dehydrated-onion-flakes.jpg'
+import dehydratedOnionPowder from '/images/products/dehydrated-onion-powder.jpg'
+import dehydratedGarlicFlakes from '/images/products/dehydrated-garlic-flakes.jpg'
+import dehydratedGarlicPowder from '/images/products/dehydrated-garlic-powder.jpg'
 
 const Products: React.FC = () => {
   const products = [
@@ -7,7 +11,7 @@ const Products: React.FC = () => {
       id: 1,
       name: 'Dehydrated Onion Flakes',
       description: 'Premium quality onion flakes with natural flavor and aroma',
-      image: '/images/products/onion-flakes.svg',
+      image: dehydratedOnionFlakes,
       features: ['100% Natural', 'Long Shelf Life', 'Retains Nutrition', 'Easy to Use'],
       applications: ['Food Processing', 'Restaurants', 'Home Cooking', 'Seasoning Blends']
     },
@@ -15,7 +19,7 @@ const Products: React.FC = () => {
       id: 2,
       name: 'Dehydrated Onion Powder',
       description: 'Fine onion powder perfect for seasoning and food preparation',
-      image: '/images/products/onion-powder.svg',
+      image: dehydratedOnionPowder,
       features: ['Fine Texture', 'Concentrated Flavor', 'No Additives', 'Consistent Quality'],
       applications: ['Spice Mixes', 'Instant Foods', 'Bakery Products', 'Snack Foods']
     },
@@ -23,7 +27,7 @@ const Products: React.FC = () => {
       id: 3,
       name: 'Dehydrated Garlic Flakes',
       description: 'High-quality garlic flakes with intense flavor and aroma',
-      image: '/images/products/garlic-flakes.svg',
+      image: dehydratedGarlicFlakes,
       features: ['Strong Aroma', 'Natural Processing', 'Premium Grade', 'Export Quality'],
       applications: ['Culinary Use', 'Food Industry', 'Seasoning', 'Ready Meals']
     },
@@ -31,7 +35,7 @@ const Products: React.FC = () => {
       id: 4,
       name: 'Dehydrated Garlic Powder',
       description: 'Fine garlic powder with concentrated flavor for various applications',
-      image: '/images/products/garlic-powder.svg',
+      image: dehydratedGarlicPowder,
       features: ['Ultra Fine', 'Rich Flavor', 'Hygienic Processing', 'Global Standards'],
       applications: ['Spice Industry', 'Fast Food', 'Marinades', 'Soup Mixes']
     }
