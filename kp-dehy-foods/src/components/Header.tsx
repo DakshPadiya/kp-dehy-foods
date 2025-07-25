@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Header.css'
+import logo from '../assets/kp-dehy-foods-trans-header.png'
 
 interface HeaderProps {
   activeSection: string
@@ -29,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
     <header className="header">
       <div className="container">
         <div className="logo">
-          <img src="/src/assets/kp-dehy-foods-trans-header.png" alt="KP Dehy Foods Logo" className="logo-image" />
+          <img src={logo} alt="KP Dehy Foods Logo" className="logo-image" />
           {/* <div className="logo-text">
             <h1>KP Dehy Foods</h1>
             <span>Premium Dehydrated Products</span>
