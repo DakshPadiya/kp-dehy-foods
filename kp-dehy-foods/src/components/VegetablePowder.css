@@ -1,0 +1,354 @@
+.vegetable-powder {
+  background: var(--background-white);
+  padding: 2rem 0;
+  color: var(--primary-green);
+}
+
+.vegetable-powder .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.product-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--background-white) 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px var(--shadow-light);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #214b3d;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #72843a;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(33, 75, 61, 0.2);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+.products-section {
+  margin-bottom: 4rem;
+}
+
+.products-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #214b3d;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.product-detail-card {
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--background-white) 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  border-top: 4px solid #72843a;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #72843a, #214b3d);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  opacity: 0.1;
+}
+
+.product-detail-card .product-image {
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  box-shadow: 0 4px 15px rgba(33, 75, 61, 0.1);
+}
+
+.product-detail-card .product-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-detail-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info h3 {
+  font-size: 2rem;
+  color: #214b3d;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.product-info > p {
+  color: #72843a;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.specifications h4,
+.product-items h4,
+.applications h4 {
+  font-size: 1.3rem;
+  color: #e57c06;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: rgba(114, 132, 58, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid #72843a;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #214b3d;
+}
+
+.spec-value {
+  color: #72843a;
+  font-weight: 500;
+}
+
+.items-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  max-height: 400px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.item {
+  padding: 0.8rem;
+  color: #214b3d;
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(114, 132, 58, 0.1);
+  transition: all 0.2s ease;
+  background: rgba(114, 132, 58, 0.05);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.item::before {
+  content: '🌿';
+  position: absolute;
+  left: 0.5rem;
+  font-size: 1rem;
+}
+
+.item:hover {
+  color: #e57c06;
+  background: rgba(114, 132, 58, 0.1);
+  transform: translateX(5px);
+}
+
+.app-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.app-tag {
+  background: linear-gradient(135deg, #214b3d, #72843a);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.app-tag:hover {
+  background: linear-gradient(135deg, #72843a, #e57c06);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(114, 132, 58, 0.3);
+}
+
+.quality-section {
+  margin-bottom: 4rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--background-white) 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-light);
+}
+
+.quality-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #214b3d;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.quality-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(33, 75, 61, 0.1);
+  transition: all 0.3s ease;
+  border-top: 3px solid #72843a;
+}
+
+.quality-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(33, 75, 61, 0.2);
+}
+
+.quality-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.quality-card h3 {
+  font-size: 1.5rem;
+  color: #214b3d;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.quality-card p {
+  color: #72843a;
+  line-height: 1.6;
+}
+
+.benefits-section {
+  padding: 3rem;
+  background: linear-gradient(135deg, #214b3d 0%, #72843a 100%);
+  border-radius: 20px;
+  color: white;
+}
+
+.benefits-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.benefit-item {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #e57c06;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .items-list {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-section,
+  .benefits-section {
+    padding: 2rem;
+  }
+}

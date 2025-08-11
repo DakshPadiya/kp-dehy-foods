@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,6 +7,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import DehydratedOnion from './components/DehydratedOnion'
 import DehydratedGarlic from './components/DehydratedGarlic'
+import VegetablePowder from './components/VegetablePowder'
 import './App.css'
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
         {activeSection === 'contact' && <Contact />}
         {activeSection === 'dehydrated-onion' && <DehydratedOnion />}
         {activeSection === 'dehydrated-garlic' && <DehydratedGarlic />}
+        {activeSection === 'vegetable-powder' && <VegetablePowder />}
       </main>
-      <Footer />
+      <Footer setActiveSection={setActiveSection} />
     </div>
   )
 }

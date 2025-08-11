@@ -1,7 +1,10 @@
-import React from 'react'
 import './Footer.css'
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  setActiveSection: (section: string) => void
+}
+
+const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
   return (
     <footer className="footer">
       <div className="container">
@@ -13,7 +16,7 @@ const Footer: React.FC = () => {
             </div>
             <p className="footer-description">
               Leading exporters of premium quality dehydrated onion and garlic products 
-              with over 15 years of experience serving global markets.
+              serving over global markets.
             </p>
             <div className="social-links">
               <a href="#" aria-label="Facebook">📘</a>
@@ -26,22 +29,20 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Our Products</h4>
             <ul>
-              <li><a href="#">Dehydrated Onion Flakes</a></li>
-              <li><a href="#">Dehydrated Onion Powder</a></li>
-              <li><a href="#">Dehydrated Garlic Flakes</a></li>
-              <li><a href="#">Dehydrated Garlic Powder</a></li>
-              <li><a href="#">Custom Blends</a></li>
+              <li><button onClick={() => setActiveSection('dehydrated-onion')}>Dehydrated Onion</button></li>
+              <li><button onClick={() => setActiveSection('dehydrated-garlic')}>Dehydrated Garlic</button></li>
+              <li><button onClick={() => setActiveSection('vegetable-powder')}>Vegetable Powder</button></li>
+              <li><button onClick={() => setActiveSection('products')}>All Products</button></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Quality Standards</a></li>
-              <li><a href="#">Certifications</a></li>
-              <li><a href="#">Export Markets</a></li>
-              <li><a href="#">Career</a></li>
+              <li><button onClick={() => setActiveSection('home')}>Home</button></li>
+              <li><button onClick={() => setActiveSection('about')}>About Us</button></li>
+              <li><button onClick={() => setActiveSection('products')}>Products</button></li>
+              <li><button onClick={() => setActiveSection('contact')}>Contact</button></li>
             </ul>
           </div>
 

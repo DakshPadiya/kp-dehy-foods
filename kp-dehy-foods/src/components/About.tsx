@@ -14,19 +14,31 @@ const About: React.FC = () => {
           <div className="about-text">
             <h3>Our Story</h3>
             <p>
-              KP Dehy Foods has been a leading name in the dehydrated food industry for over 15 years. 
-              We specialize in producing and exporting premium quality dehydrated onion and garlic products 
-              to markets worldwide. Our commitment to quality, innovation, and customer satisfaction has 
-              made us a trusted partner for businesses across 50+ countries.
+              We are leading manufacturer, supplier and exporter of dehydrated onion, garlic, fried onion, 
+              fried garlic, onion powder, garlic powder, vegetable powder, spices and many other products. 
+              We are located in mahuva, Gujarat, India. Which is a hub for dehydrated onion & garlic.
             </p>
-            
-            <h3>Our Mission</h3>
+            <p>
+              We KP Dehy Foods, works on a principle of good quality, trust & healthy relationship with customers.
+            </p>
+            <p>
+              We assure you to deliver the best of the product which you will get at your own kp dehy foods.
+            </p>
+            <p>
+              Aroma, taste with good packaging and quality is are moto, 
+              we do this by directly delivering from the lap of mother earth to your kitchen & in your recipes.
+            </p>
+            <p>
+              We welcome you to join our  family, come join us in our journey which is one of the world's best 
+              quality of dehydrated Orion Garlic and many more products.
+            </p>
+            {/* <h3>Our Mission</h3>
             <p>
               To provide the highest quality dehydrated food products while maintaining sustainable 
               practices and building long-term relationships with our customers and suppliers. We strive 
               to preserve the natural taste, nutrition, and quality of fresh vegetables through our 
               advanced dehydration processes.
-            </p>
+            </p> */}
           </div>
           
           <div className="about-features">

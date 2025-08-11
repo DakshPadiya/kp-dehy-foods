@@ -10,10 +10,15 @@ const Hero: React.FC<HeroProps> = ({ setActiveSection }) => {
     <section className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1>Premium Dehydrated Foods</h1>
+          <h1>WELCOME TO</h1>
           <h2>KP Dehy Foods</h2>
           <p>
-            Leading exporters of premium quality dehydrated onion and garlic products. 
+            We are leading manufacturer, supplier and exporter of dehydrated onion, garlic, 
+            fried onion, fried garlic, onion powder, garlic powder, vegetable powder, 
+            spices and many other products. We are located in mahuva, Gujarat, India. 
+            Which is a hub for dehydrated onion & garlic.
+          </p>
+          <p>
             We bring you the finest dried vegetables with exceptional taste, nutrition, 
             and extended shelf life for global markets.
           </p>
@@ -50,6 +55,16 @@ const Hero: React.FC<HeroProps> = ({ setActiveSection }) => {
             >
               <h3>Dehydrated Garlic</h3>
               <p>Fresh dried garlic products</p>
+              <div className="card-overlay">
+                <span>View Details →</span>
+              </div>
+            </div>
+            <div 
+              className="product-card vegetables clickable" 
+              onClick={() => setActiveSection('vegetable-powder')}
+            >
+              <h3>Vegetable Powder</h3>
+              <p>Premium spices & vegetable powders</p>
               <div className="card-overlay">
                 <span>View Details →</span>
               </div>

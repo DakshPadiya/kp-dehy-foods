@@ -1,15 +1,14 @@
-import React from 'react'
 import './DehydratedOnion.css'
 import dehydratedOnionFlakes from '/images/products/dehydrated-onion-flakes.jpg'
 import dehydratedOnionPowder from '/images/products/dehydrated-onion-powder.jpg'
 import dehydratedOnionProducts from '/images/products/dehydrated-onion-products.jpg'
 
 const DehydratedOnion: React.FC = () => {
-  const onionProducts = [
+  const onionCategories = [
     {
       id: 1,
-      name: 'Dehydrated Onion Flakes',
-      description: 'Premium quality onion flakes with natural flavor and aroma',
+      name: 'Dehydrated White Onion',
+      description: 'Premium quality white onion products with natural flavor and aroma',
       image: dehydratedOnionFlakes,
       specifications: {
         moisture: '5-7%',
@@ -17,13 +16,39 @@ const DehydratedOnion: React.FC = () => {
         packaging: '25kg/50kg Bags',
         storage: 'Cool & Dry Place'
       },
-      features: ['100% Natural', 'Long Shelf Life', 'Retains Nutrition', 'Easy to Use'],
+      items: [
+        'White onion flakes',
+        'White onion chopped (3-5 MM)',
+        'White onion minced (1-3 MM)',
+        'White onion granules (0.5-1 MM)',
+        'White onion powder'
+      ],
       applications: ['Food Processing', 'Restaurants', 'Home Cooking', 'Seasoning Blends']
     },
     {
       id: 2,
-      name: 'Dehydrated Onion Powder',
-      description: 'Fine onion powder perfect for seasoning and food preparation',
+      name: 'Dehydrated Pink Onion',
+      description: 'High-quality pink onion products with rich flavor and color',
+      image: dehydratedOnionFlakes,
+      specifications: {
+        moisture: '5-7%',
+        shelfLife: '24 Months',
+        packaging: '25kg/50kg Bags',
+        storage: 'Cool & Dry Place'
+      },
+      items: [
+        'Pink onion flakes',
+        'Pink onion chopped (3-5 MM)',
+        'Pink onion minced (1-3 MM)',
+        'Pink onion granules (0.5-1 MM)',
+        'Pink onion powder'
+      ],
+      applications: ['Culinary Use', 'Food Industry', 'Spice Mixes', 'Ready Meals']
+    },
+    {
+      id: 3,
+      name: 'Dehydrated Red Onion',
+      description: 'Premium red onion products with intense flavor and deep color',
       image: dehydratedOnionPowder,
       specifications: {
         moisture: '5-7%',
@@ -31,8 +56,34 @@ const DehydratedOnion: React.FC = () => {
         packaging: '25kg/50kg Bags',
         storage: 'Cool & Dry Place'
       },
-      features: ['Fine Texture', 'Concentrated Flavor', 'No Additives', 'Consistent Quality'],
-      applications: ['Spice Mixes', 'Instant Foods', 'Bakery Products', 'Snack Foods']
+      items: [
+        'Red onion flakes',
+        'Red onion chopped (3-5 MM)',
+        'Red onion minced (1-3 MM)',
+        'Red onion granules (0.5-1 MM)',
+        'Red onion powder'
+      ],
+      applications: ['Gourmet Cooking', 'Premium Products', 'Export Quality', 'Specialty Foods']
+    },
+    {
+      id: 4,
+      name: 'Fried Onion',
+      description: 'Crispy fried onion products for enhanced taste and texture',
+      image: dehydratedOnionFlakes,
+      specifications: {
+        moisture: '2-4%',
+        shelfLife: '18 Months',
+        packaging: '25kg/50kg Bags',
+        storage: 'Cool & Dry Place'
+      },
+      items: [
+        'Fresh fried onion',
+        'Fried coated onion',
+        'Fried coated white onion',
+        'Fried pink onion flakes',
+        'Fried white onion flakes'
+      ],
+      applications: ['Snack Industry', 'Ready-to-eat Foods', 'Garnishing', 'Fast Food']
     }
   ]
 
@@ -54,42 +105,42 @@ const DehydratedOnion: React.FC = () => {
         <div className="products-section">
           <h2>Our Onion Product Range</h2>
           <div className="products-grid">
-            {onionProducts.map((product) => (
-              <div key={product.id} className="product-detail-card">
+            {onionCategories.map((category) => (
+              <div key={category.id} className="product-detail-card">
                 <div className="product-image">
-                  <img src={product.image} alt={product.name} />
+                  <img src={category.image} alt={category.name} />
                 </div>
                 <div className="product-info">
-                  <h3>{product.name}</h3>
-                  <p>{product.description}</p>
+                  <h3>{category.name}</h3>
+                  <p>{category.description}</p>
                   
                   <div className="specifications">
                     <h4>Specifications</h4>
                     <div className="spec-grid">
                       <div className="spec-item">
                         <span className="spec-label">Moisture Content:</span>
-                        <span className="spec-value">{product.specifications.moisture}</span>
+                        <span className="spec-value">{category.specifications.moisture}</span>
                       </div>
                       <div className="spec-item">
                         <span className="spec-label">Shelf Life:</span>
-                        <span className="spec-value">{product.specifications.shelfLife}</span>
+                        <span className="spec-value">{category.specifications.shelfLife}</span>
                       </div>
                       <div className="spec-item">
                         <span className="spec-label">Packaging:</span>
-                        <span className="spec-value">{product.specifications.packaging}</span>
+                        <span className="spec-value">{category.specifications.packaging}</span>
                       </div>
                       <div className="spec-item">
                         <span className="spec-label">Storage:</span>
-                        <span className="spec-value">{product.specifications.storage}</span>
+                        <span className="spec-value">{category.specifications.storage}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="features">
-                    <h4>Key Features</h4>
-                    <ul>
-                      {product.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
+                  <div className="product-items">
+                    <h4>Available Products</h4>
+                    <ul className="items-list">
+                      {category.items.map((item, index) => (
+                        <li key={index} className="item">{item}</li>
                       ))}
                     </ul>
                   </div>
@@ -97,7 +148,7 @@ const DehydratedOnion: React.FC = () => {
                   <div className="applications">
                     <h4>Applications</h4>
                     <div className="app-tags">
-                      {product.applications.map((app, index) => (
+                      {category.applications.map((app, index) => (
                         <span key={index} className="app-tag">{app}</span>
                       ))}
                     </div>

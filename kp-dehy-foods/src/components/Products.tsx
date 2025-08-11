@@ -1,43 +1,97 @@
-import React from 'react'
 import './Products.css'
 import dehydratedOnionFlakes from '/images/products/dehydrated-onion-flakes.jpg'
-import dehydratedOnionPowder from '/images/products/dehydrated-onion-powder.jpg'
 import dehydratedGarlicFlakes from '/images/products/dehydrated-garlic-flakes.jpg'
 import dehydratedGarlicPowder from '/images/products/dehydrated-garlic-powder.jpg'
 
 const Products: React.FC = () => {
-  const products = [
+  const productCategories = [
     {
       id: 1,
-      name: 'Dehydrated Onion Flakes',
-      description: 'Premium quality onion flakes with natural flavor and aroma',
+      name: 'Dehydrated White Onion',
+      description: 'Premium quality white onion products with natural flavor and aroma',
       image: dehydratedOnionFlakes,
-      features: ['100% Natural', 'Long Shelf Life', 'Retains Nutrition', 'Easy to Use'],
-      applications: ['Food Processing', 'Restaurants', 'Home Cooking', 'Seasoning Blends']
+      items: [
+        'White onion flakes',
+        'White onion chopped (3-5 MM)',
+        'White onion minced (1-3 MM)',
+        'White onion granules (0.5-1 MM)',
+        'White onion powder'
+      ]
     },
     {
       id: 2,
-      name: 'Dehydrated Onion Powder',
-      description: 'Fine onion powder perfect for seasoning and food preparation',
-      image: dehydratedOnionPowder,
-      features: ['Fine Texture', 'Concentrated Flavor', 'No Additives', 'Consistent Quality'],
-      applications: ['Spice Mixes', 'Instant Foods', 'Bakery Products', 'Snack Foods']
+      name: 'Dehydrated Pink Onion',
+      description: 'High-quality pink onion products with rich flavor and color',
+      image: dehydratedOnionFlakes,
+      items: [
+        'Pink onion flakes',
+        'Pink onion chopped (3-5 MM)',
+        'Pink onion minced (1-3 MM)',
+        'Pink onion granules (0.5-1 MM)',
+        'Pink onion powder'
+      ]
     },
     {
       id: 3,
-      name: 'Dehydrated Garlic Flakes',
-      description: 'High-quality garlic flakes with intense flavor and aroma',
-      image: dehydratedGarlicFlakes,
-      features: ['Strong Aroma', 'Natural Processing', 'Premium Grade', 'Export Quality'],
-      applications: ['Culinary Use', 'Food Industry', 'Seasoning', 'Ready Meals']
+      name: 'Dehydrated Red Onion',
+      description: 'Premium red onion products with intense flavor and deep color',
+      image: dehydratedOnionFlakes,
+      items: [
+        'Red onion flakes',
+        'Red onion chopped (3-5 MM)',
+        'Red onion minced (1-3 MM)',
+        'Red onion granules (0.5-1 MM)',
+        'Red onion powder'
+      ]
     },
     {
       id: 4,
-      name: 'Dehydrated Garlic Powder',
-      description: 'Fine garlic powder with concentrated flavor for various applications',
+      name: 'Fried Onion',
+      description: 'Crispy fried onion products for enhanced taste and texture',
+      image: dehydratedOnionFlakes,
+      items: [
+        'Fresh fried onion',
+        'Fried coated onion',
+        'Fried coated white onion',
+        'Fried pink onion flakes',
+        'Fried white onion flakes'
+      ]
+    },
+    {
+      id: 5,
+      name: 'Dehydrated Garlic',
+      description: 'High-quality garlic products with intense flavor and aroma',
+      image: dehydratedGarlicFlakes,
+      items: [
+        'Garlic cloves',
+        'Garlic chopped (3-5 MM)',
+        'Garlic minced (1-3 MM)',
+        'Garlic granules (0.5-1 MM)',
+        'Garlic powder'
+      ]
+    },
+    {
+      id: 6,
+      name: 'Vegetables Powder',
+      description: 'Premium vegetable powders and spices for culinary excellence',
       image: dehydratedGarlicPowder,
-      features: ['Ultra Fine', 'Rich Flavor', 'Hygienic Processing', 'Global Standards'],
-      applications: ['Spice Industry', 'Fast Food', 'Marinades', 'Soup Mixes']
+      items: [
+        'Beet root powder',
+        'Coriander leaves powder',
+        'Dry mango powder',
+        'Fenugreek leaves',
+        'Lemon powder',
+        'Mint leaves powder',
+        'Spinach powder',
+        'Potato powder',
+        'Tamarind powder',
+        'Tomato powder',
+        'Ginger flakes',
+        'Ginger powder',
+        'Green chilli powder',
+        'Red chilli powder',
+        'Turmeric powder'
+      ]
     }
   ]
 
@@ -46,36 +100,31 @@ const Products: React.FC = () => {
       <div className="container">
         <div className="products-header">
           <h2>Our Premium Products</h2>
-          <p>High-quality dehydrated onion and garlic products for global markets</p>
+          {/* <p>High-quality dehydrated onion and garlic products for global markets</p> */}
+          <p>
+            Explore the exceptional quality of KP Dehy Foods, a leading manufacturer, 
+            supplier & exporter of dehydrated onion, garlic & spices with best quality and hygiene.
+          </p>
         </div>
 
         <div className="products-grid">
-          {products.map((product) => (
-            <div key={product.id} className="product-card">
+          {productCategories.map((category) => (
+            <div key={category.id} className="product-card">
               <div className="product-image">
-                <img src={product.image} alt={product.name} />
+                <img src={category.image} alt={category.name} />
               </div>
               <div className="product-header">
-                <h3>{product.name}</h3>
-                <p>{product.description}</p>
+                <h3>{category.name}</h3>
+                <p>{category.description}</p>
               </div>
               
-              <div className="product-features">
-                <h4>Key Features</h4>
-                <ul>
-                  {product.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
+              <div className="product-items">
+                <h4>Products Available</h4>
+                <ul className="product-items-list">
+                  {category.items.map((item, index) => (
+                    <li key={index} className="product-item">{item}</li>
                   ))}
                 </ul>
-              </div>
-              
-              <div className="product-applications">
-                <h4>Applications</h4>
-                <div className="applications-tags">
-                  {product.applications.map((app, index) => (
-                    <span key={index} className="app-tag">{app}</span>
-                  ))}
-                </div>
               </div>
               
               <button className="product-btn">Get Quote</button>

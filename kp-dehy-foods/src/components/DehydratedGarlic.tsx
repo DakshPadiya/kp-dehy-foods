@@ -1,40 +1,28 @@
-import React from 'react'
 import './DehydratedGarlic.css'
 import dehydratedGarlicFlakes from '/images/products/dehydrated-garlic-flakes.jpg'
-import dehydratedGarlicPowder from '/images/products/dehydrated-garlic-powder.jpg'
 import dehydratedGarlicProducts from '/images/products/dehydrated-garlic-products.jpg'
 
 const DehydratedGarlic: React.FC = () => {
-  const garlicProducts = [
-    {
-      id: 1,
-      name: 'Dehydrated Garlic Flakes',
-      description: 'High-quality garlic flakes with intense flavor and aroma',
-      image: dehydratedGarlicFlakes,
-      specifications: {
-        moisture: '5-6%',
-        shelfLife: '24 Months',
-        packaging: '25kg/50kg Bags',
-        storage: 'Cool & Dry Place'
-      },
-      features: ['Strong Aroma', 'Natural Processing', 'Premium Grade', 'Export Quality'],
-      applications: ['Culinary Use', 'Food Industry', 'Seasoning', 'Ready Meals']
+  const garlicCategory = {
+    id: 1,
+    name: 'Dehydrated Garlic',
+    description: 'High-quality garlic products with intense flavor and aroma',
+    image: dehydratedGarlicFlakes,
+    specifications: {
+      moisture: '5-6%',
+      shelfLife: '24 Months',
+      packaging: '25kg/50kg Bags',
+      storage: 'Cool & Dry Place'
     },
-    {
-      id: 2,
-      name: 'Dehydrated Garlic Powder',
-      description: 'Fine garlic powder with concentrated flavor for various applications',
-      image: dehydratedGarlicPowder,
-      specifications: {
-        moisture: '5-6%',
-        shelfLife: '24 Months',
-        packaging: '25kg/50kg Bags',
-        storage: 'Cool & Dry Place'
-      },
-      features: ['Ultra Fine', 'Rich Flavor', 'Hygienic Processing', 'Global Standards'],
-      applications: ['Spice Industry', 'Fast Food', 'Marinades', 'Soup Mixes']
-    }
-  ]
+    items: [
+      'Garlic cloves',
+      'Garlic chopped (3-5 MM)',
+      'Garlic minced (1-3 MM)',
+      'Garlic granules (0.5-1 MM)',
+      'Garlic powder'
+    ],
+    applications: ['Culinary Use', 'Food Industry', 'Seasoning', 'Ready Meals', 'Spice Industry', 'Fast Food', 'Marinades', 'Soup Mixes']
+  }
 
   return (
     <section className="dehydrated-garlic">
@@ -54,57 +42,55 @@ const DehydratedGarlic: React.FC = () => {
         <div className="products-section">
           <h2>Our Garlic Product Range</h2>
           <div className="products-grid">
-            {garlicProducts.map((product) => (
-              <div key={product.id} className="product-detail-card">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} />
+            <div className="product-detail-card">
+              <div className="product-image">
+                <img src={garlicCategory.image} alt={garlicCategory.name} />
+              </div>
+              <div className="product-info">
+                <h3>{garlicCategory.name}</h3>
+                <p>{garlicCategory.description}</p>
+                
+                <div className="specifications">
+                  <h4>Specifications</h4>
+                  <div className="spec-grid">
+                    <div className="spec-item">
+                      <span className="spec-label">Moisture Content:</span>
+                      <span className="spec-value">{garlicCategory.specifications.moisture}</span>
+                    </div>
+                    <div className="spec-item">
+                      <span className="spec-label">Shelf Life:</span>
+                      <span className="spec-value">{garlicCategory.specifications.shelfLife}</span>
+                    </div>
+                    <div className="spec-item">
+                      <span className="spec-label">Packaging:</span>
+                      <span className="spec-value">{garlicCategory.specifications.packaging}</span>
+                    </div>
+                    <div className="spec-item">
+                      <span className="spec-label">Storage:</span>
+                      <span className="spec-value">{garlicCategory.specifications.storage}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="product-info">
-                  <h3>{product.name}</h3>
-                  <p>{product.description}</p>
-                  
-                  <div className="specifications">
-                    <h4>Specifications</h4>
-                    <div className="spec-grid">
-                      <div className="spec-item">
-                        <span className="spec-label">Moisture Content:</span>
-                        <span className="spec-value">{product.specifications.moisture}</span>
-                      </div>
-                      <div className="spec-item">
-                        <span className="spec-label">Shelf Life:</span>
-                        <span className="spec-value">{product.specifications.shelfLife}</span>
-                      </div>
-                      <div className="spec-item">
-                        <span className="spec-label">Packaging:</span>
-                        <span className="spec-value">{product.specifications.packaging}</span>
-                      </div>
-                      <div className="spec-item">
-                        <span className="spec-label">Storage:</span>
-                        <span className="spec-value">{product.specifications.storage}</span>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="features">
-                    <h4>Key Features</h4>
-                    <ul>
-                      {product.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="product-items">
+                  <h4>Available Products</h4>
+                  <ul className="items-list">
+                    {garlicCategory.items.map((item, index) => (
+                      <li key={index} className="item">{item}</li>
+                    ))}
+                  </ul>
+                </div>
 
-                  <div className="applications">
-                    <h4>Applications</h4>
-                    <div className="app-tags">
-                      {product.applications.map((app, index) => (
-                        <span key={index} className="app-tag">{app}</span>
-                      ))}
-                    </div>
+                <div className="applications">
+                  <h4>Applications</h4>
+                  <div className="app-tags">
+                    {garlicCategory.applications.map((app, index) => (
+                      <span key={index} className="app-tag">{app}</span>
+                    ))}
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
 
